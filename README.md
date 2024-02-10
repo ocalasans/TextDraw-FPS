@@ -25,6 +25,6 @@ Assim que o jogador se conecta ao servidor, o `textdraw` é exibido no canto sup
 ### Informações de contato
 
 Instagram: [ocalasans](https://instagram.com/ocalasans)   
-YouTube: [Walkerxinho](https://www.youtube.com/@walkerxinho)   
-Discord: walkerxinho7 ou Walkerxinho7#9124   
+YouTube: [Calasans](https://www.youtube.com/@ocalasans)   
+Discord: ocalasans   
 Comunidade: [SA:MP Programming Community©](https://abre.ai/samp-spc)
