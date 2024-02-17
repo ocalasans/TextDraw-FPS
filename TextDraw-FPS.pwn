@@ -36,7 +36,7 @@ stock TFF_obter_fps(playerid)
             new TFF_obter = GetPVarInt(playerid, "VFI_drunk_ii") - GetPVarInt(playerid, "VFI_drunk");
             //
             if((TFF_obter >= 1) && (TFF_obter <= 300))
-                SetPVarInt(playerid, "VFI_fps", TFF_obter+30);
+                SetPVarInt(playerid, "VFI_fps", TFF_obter);
             //
             SetPVarInt(playerid, "VFI_drunk_ii", GetPVarInt(playerid, "VFI_drunk"));
         }
@@ -91,7 +91,7 @@ public OnPlayerConnect(playerid)
     //
     PlayerTextDrawShow(playerid, TFF_text_fps[playerid]);
     //
-    TFF_cronometro[playerid] = SetTimerEx("TFF_timer_fps", 100, true, "i", playerid);
+    TFF_cronometro[playerid] = SetTimerEx("TFF_timer_fps", 0, true, "i", playerid);
     return true;
 }
 
