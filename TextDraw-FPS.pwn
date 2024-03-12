@@ -24,23 +24,23 @@ static TFF_cronometro[MAX_PLAYERS],
 //
 stock TFF_obter_fps(playerid)
 {
-    SetPVarInt(playerid, "VFI_drunk", GetPlayerDrunkLevel(playerid));
+    SetPVarInt(playerid, "TFF_drunk", GetPlayerDrunkLevel(playerid));
     //
-    if(GetPVarInt(playerid, "VFI_drunk") <= 100)
+    if(GetPVarInt(playerid, "TFF_drunk") <= 100)
         SetPlayerDrunkLevel(playerid, 2000);
     //
     else
     {
-        if(GetPVarInt(playerid, "VFI_drunk_ii") != GetPVarInt(playerid, "VFI_drunk"))
+        if(GetPVarInt(playerid, "TFF_drunk_ii") != GetPVarInt(playerid, "TFF_drunk"))
         {
-            new TFF_obter = GetPVarInt(playerid, "VFI_drunk_ii") - GetPVarInt(playerid, "VFI_drunk");
+            new TFF_obter = GetPVarInt(playerid, "TFF_drunk_ii") - GetPVarInt(playerid, "TFF_drunk");
             //
             if((TFF_obter >= 1) && (TFF_obter <= 300))
-                SetPVarInt(playerid, "VFI_fps", TFF_obter);
+                SetPVarInt(playerid, "TFF_fps", TFF_obter);
             //
-            SetPVarInt(playerid, "VFI_drunk_ii", GetPVarInt(playerid, "VFI_drunk"));
+            SetPVarInt(playerid, "TFF_drunk_ii", GetPVarInt(playerid, "TFF_drunk"));
         }
-        return GetPVarInt(playerid, "VFI_fps");
+        return GetPVarInt(playerid, "TFF_fps");
     }
     //
     return false;
@@ -97,11 +97,7 @@ public OnPlayerConnect(playerid)
 
 public OnPlayerDisconnect(playerid, reason)
 {
-    switch(reason)
-    {
-        case 0..2:
-            KillTimer(TFF_cronometro[playerid]);
-    }
+    KillTimer(TFF_cronometro[playerid]);
     //
     PlayerTextDrawHide(playerid, TFF_text_fps[playerid]);
     //
