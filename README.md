@@ -2,6 +2,8 @@
 
 Este Filterscript apresenta um sistema de `TextDraw` com o objetivo de exibir o `FPS` do jogador.
 
+* Repositório baseado no tópico: [GetPlayerFPS example](https://sampforum.blast.hk/showthread.php?tid=172085&highlight=GetPlayerFPS).
+
 -----------------------
 
 ### Como instalar?
